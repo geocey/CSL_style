@@ -6,17 +6,24 @@
 
   <info>
     <title>IEEE (Clickable DOI)</title>
+
+    <!-- REQUIRED by Mendeley -->
     <id>http://www.zotero.org/styles/ieee-clickable-doi</id>
-    <link href="http://www.zotero.org/styles/ieee" rel="independent-parent"/>
+    <link href="http://www.zotero.org/styles/ieee-clickable-doi" rel="self"/>
+    <link href="http://www.zotero.org/styles/ieee" rel="dependent-parent"/>
+
     <author>
       <name>Custom IEEE DOI Fix</name>
     </author>
+
     <category citation-format="numeric"/>
     <category field="engineering"/>
-    <updated>2026-02-03</updated>
+
+    <!-- REQUIRED ISO timestamp -->
+    <updated>2026-02-03T00:00:00Z</updated>
   </info>
 
-  <!-- DOI macro (correct CSL syntax) -->
+  <!-- DOI macro (valid CSL + clickable) -->
   <macro name="doi">
     <choose>
       <if variable="doi">
