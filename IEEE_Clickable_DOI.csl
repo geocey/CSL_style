@@ -3,6 +3,7 @@
        version="1.0"
        class="numeric"
        default-locale="en-US">
+
   <info>
     <title>IEEE (Clickable DOI)</title>
     <id>http://www.zotero.org/styles/ieee-clickable-doi</id>
@@ -15,11 +16,11 @@
     <updated>2026-02-03</updated>
   </info>
 
+  <!-- DOI macro (correct CSL syntax) -->
   <macro name="doi">
     <choose>
-      <if variable="DOI">
-        <text value=" doi: "/>
-        <text variable="DOI" prefix="https://doi.org/"/>
+      <if variable="doi">
+        <text variable="doi" prefix=" https://doi.org/"/>
       </if>
     </choose>
   </macro>
@@ -33,8 +34,9 @@
   <bibliography hanging-indent="true" second-field-align="flush">
     <layout>
       <text variable="citation-number" prefix="[" suffix="] "/>
-      <text variable="title" suffix=", "/>
+      <text variable="title"/>
       <text macro="doi"/>
     </layout>
   </bibliography>
+
 </style>
